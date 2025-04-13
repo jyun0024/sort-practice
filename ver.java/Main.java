@@ -1,23 +1,31 @@
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
-import java.util.random.*;
+import java.util.TreeMap;
 
 class Main {
     public static void main(String[] args) {
-        // TODO ランダムな数字の配列を生成
-        
-        // ArrayList<Integer> array_num = new ArrayList<>();
-        // array_num = RandArrya(1);
-        System.out.println(RandArrya(3));
+        // TODO ランダムな数字の配列(Map)を生成
+        Map<Integer, Integer> hMap = new HashMap<>();
+        hMap = randMap(10);
+        System.out.println(hMap);
+        // System.out.println(randArrya(10));
         // TODO ツリーソート
+        System.out.println("TreeSort");
+        Map<Integer, Integer> tMap = new TreeMap<>(hMap);
+        System.out.println(tMap);
+        // for (Integer key : tMap.keySet()) {
+        // System.out.println(key + ":" + tMap.get(key));
+        // }
     }
 
-    public static ArrayList<Integer> RandArrya(int roopTime) {
+    public static Map<Integer, Integer> randMap(int roopTime) {
         Random rand = new Random();
-        ArrayList<Integer> randArray = new ArrayList<>();
+        Map<Integer, Integer> mapNum = new HashMap<Integer, Integer>();
         for (int i = 0; roopTime > i; i++) {
-            randArray.add(rand.nextInt(100));
+            mapNum.put(rand.nextInt(100), i);
         }
-        return randArray;
+        return mapNum;
     }
+
 }
