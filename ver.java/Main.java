@@ -5,18 +5,19 @@ import java.util.TreeMap;
 
 class Main {
     public static void main(String[] args) {
-        // TODO ランダムな数字の配列(Map)を生成
         Map<Integer, Integer> hMap = new HashMap<>();
         hMap = randMap(10);
-        System.out.println(hMap);
-        // System.out.println(randArrya(10));
-        // TODO ツリーソート
-        System.out.println("TreeSort");
+        System.out.println("ソート前");
+        // System.out.println(hMap);
+        for (Integer key : hMap.keySet()) {
+            System.out.print(key + ", ");
+        }
+        System.out.println("\nツリーソート後");
         Map<Integer, Integer> tMap = new TreeMap<>(hMap);
-        System.out.println(tMap);
-        // for (Integer key : tMap.keySet()) {
-        // System.out.println(key + ":" + tMap.get(key));
-        // }
+        // System.out.println(tMap);
+        for (Integer key : tMap.keySet()) {
+            System.out.print(key + ", ");
+        }
     }
 
     public static Map<Integer, Integer> randMap(int roopTime) {
