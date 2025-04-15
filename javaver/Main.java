@@ -1,10 +1,10 @@
 class Main {
     public static void main(String[] args) {
         // ツリーソート
-        TreeSort.treeSort(RandMap.randMap(10));
+        TreeSort.treeSort(GenerateRandom.randMap(10));
         // ヒープソート
-        HeapSort.heapSort(RandMap.randMap(10));
+        HeapSort.heapSort(GenerateRandom.randArray(10));
         // クイックソート
-        QuickSort.quickSort(RandMap.randMap(10));
+        QuickSort.quickSort(GenerateRandom.randArray(10));
     }
 }
